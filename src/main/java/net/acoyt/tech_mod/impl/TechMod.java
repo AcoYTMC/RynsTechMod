@@ -14,6 +14,7 @@ public class TechMod implements ModInitializer {
         TMAttributes.init();
         TMBlockEntities.init();
         TMBlocks.init();
+        TMCreativeModeTabs.init();
         TMDataComponents.init();
         TMItems.init();
     }

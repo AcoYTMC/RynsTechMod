@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
+import net.minecraft.client.data.models.model.ModelTemplates;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.equipment.trim.TrimMaterials;
 import org.jetbrains.annotations.Nullable;
@@ -24,6 +25,8 @@ public class TMModelProvider extends FabricModelProvider {
     }
 
     public void generateItemModels(ItemModelGenerators generators) {
+        generators.generateFlatItem(TMItems.LOGIC_INGOT, ModelTemplates.FLAT_ITEM);
+
         generateNullsafeTrimmableArmorSet(
                 generators,
                 null,
@@ -35,15 +38,7 @@ public class TMModelProvider extends FabricModelProvider {
         );
     }
 
-    public static void generateNullsafeTrimmableArmorSet(
-            ItemModelGenerators generators,
-            @Nullable Item helmet,
-            @Nullable Item chestplate,
-            @Nullable Item leggings,
-            @Nullable Item boots,
-            boolean hasDyedLayer,
-            Map<TrimMaterials.Palette, TrimMaterials.Palette> trimPaletteReplacements
-    ) {
+    public static void generateNullsafeTrimmableArmorSet(ItemModelGenerators generators, @Nullable Item helmet, @Nullable Item chestplate, @Nullable Item leggings, @Nullable Item boots, boolean hasDyedLayer, Map<TrimMaterials.Palette, TrimMaterials.Palette> trimPaletteReplacements) {
         if (helmet != null) generators.generateTrimmableItem(helmet, ItemModelGenerators.TRIM_PREFIX_HELMET, hasDyedLayer, trimPaletteReplacements);
         if (chestplate != null) generators.generateTrimmableItem(chestplate, ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, hasDyedLayer, trimPaletteReplacements);
         if (leggings != null) generators.generateTrimmableItem(leggings, ItemModelGenerators.TRIM_PREFIX_LEGGINGS, hasDyedLayer, trimPaletteReplacements);

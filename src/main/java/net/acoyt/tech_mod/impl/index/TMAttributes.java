@@ -13,7 +13,7 @@ public interface TMAttributes {
     AttributeRegistrant ATTRIBUTES = new AttributeRegistrant(TechMod.MOD_ID);
 
     Holder<Attribute> AIR_MOBILITY_MULTIPLIER = ATTRIBUTES.registerRef("air_mobility_multiplier",
-            new RangedAttribute("attribute.name.air_mobility_multiplier", 1.0, 0.0, 2.0));
+            new RangedAttribute("attribute.name.air_mobility_multiplier", 1.0, 0.0, 4.0));
 
     static void init() {}
 }

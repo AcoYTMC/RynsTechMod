@@ -40,7 +40,7 @@ public abstract class ArmorMaterialMixin {
             if (type == ArmorType.CHESTPLATE) {
                 instance.add(
                         TMAttributes.AIR_MOBILITY_MULTIPLIER,
-                        new AttributeModifier(modifierId, 0.2, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
+                        new AttributeModifier(modifierId, 0.5, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
                         slotGroup
                 );
 

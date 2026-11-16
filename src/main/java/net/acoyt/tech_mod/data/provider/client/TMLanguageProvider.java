@@ -1,6 +1,5 @@
 package net.acoyt.tech_mod.data.provider.client;
 
-import net.acoyt.tech_mod.impl.index.TMAttributes;
 import net.acoyt.tech_mod.impl.index.TMBlocks;
 import net.acoyt.tech_mod.impl.index.TMItems;
 import net.acoyt.tech_mod.impl.index.tag.TMItemTags;
@@ -19,10 +18,13 @@ public class TMLanguageProvider extends FabricLanguageProvider {
     }
 
     public void generateTranslations(HolderLookup.Provider provider, TranslationBuilder builder) {
-        TMAttributes.ATTRIBUTES.registerLang(provider, builder);
         TMBlocks.BLOCKS.registerLang(provider, builder);
         TMItems.ITEMS.registerLang(provider, builder);
 
         TMItemTags.BUILDER.registerLang(provider, builder);
+
+        builder.add("attribute.name.air_mobility_multiplier", "Air Mobility Multiplier");
+
+        builder.add("itemGroup.tech_mod.main", "Ryn's Tech Mod");
     }
 }
