@@ -41,13 +41,13 @@ repositories {
 }
 
 loom {
-    accessWidenerPath = file("src/main/resources/template.classtweaker")
+    accessWidenerPath = file("src/main/resources/tech_mod.classtweaker")
 }
 
 fabricApi {
 	configureDataGeneration {
 		client = true
-		modId = "template"
+		modId = "tech_mod"
 	}
 }
 
@@ -64,6 +64,7 @@ dependencies {
 
     // Libraries
     implementation ("maven.modrinth:acornlib:${project.acornlib_version}")
+    implementation ("maven.modrinth:trinkets-updated:${project.trinkets_version}")
 
     // Config
     api ("com.terraformersmc:modmenu:${project.modmenu_version}")

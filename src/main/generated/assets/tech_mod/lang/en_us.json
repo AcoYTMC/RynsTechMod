@@ -1,0 +1,10 @@
+{
+  "attribute.name.air_mobility_multiplier": "",
+  "item.tech_mod.checkpoint": "Checkpoint",
+  "item.tech_mod.goggles": "Goggles",
+  "item.tech_mod.logic_boots": "Logic Boots",
+  "item.tech_mod.logic_chestplate": "Logic Chestplate",
+  "item.tech_mod.logic_ingot": "Logic Ingot",
+  "item.tech_mod.logic_leggings": "Logic Leggings",
+  "tag.item.tech_mod.repairs_logic_armor": "Repairs Logic Armor"
+}

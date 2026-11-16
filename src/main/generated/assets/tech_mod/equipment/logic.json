@@ -1,0 +1,19 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "tech_mod:logic"
+      }
+    ],
+    "humanoid_baby": [
+      {
+        "texture": "tech_mod:logic"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "tech_mod:logic"
+      }
+    ]
+  }
+}
